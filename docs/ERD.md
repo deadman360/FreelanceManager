@@ -1,5 +1,4 @@
 ```mermaid
-```
 erDiagram
     CLIENTS ||--o{ PROJECTS : "requests"
     PROJECTS ||--o{ CREDENTIALS : "uses"
@@ -8,7 +7,6 @@ erDiagram
     PROJECTS ||--o{ ACTIVITY_LOGS : "has_history"
     PROJECTS ||--o{ TIME_ENTRIES : "tracks_time"
     TASKS |o--o{ TIME_ENTRIES : "specific_work_log"
-```
 ```
     CLIENTS {
         bigint id PK
