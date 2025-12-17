@@ -17,7 +17,9 @@ class ActivityLogFactory extends Factory
     public function definition(): array
     {
         return [
-            //
+            'project_id' => Project::factory(),
+            'action_type' => fake()->word(),
+            'description' => fake()->sentence(20),
         ];
     }
 }

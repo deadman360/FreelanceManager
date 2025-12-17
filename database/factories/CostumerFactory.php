@@ -17,7 +17,11 @@ class CostumerFactory extends Factory
     public function definition(): array
     {
         return [
-            //
+            'name' => fake()->name(),
+            'email' => fake()->email(),
+            'platform' => 'Fiverr',
+            'platform_username' => fake()->userName(),
+            'notes' => fake()->sentence(25),
         ];
     }
 }

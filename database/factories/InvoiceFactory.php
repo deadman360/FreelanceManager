@@ -2,6 +2,7 @@
 
 namespace Database\Factories;
 
+use App\Models\Project;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
@@ -17,7 +18,11 @@ class InvoiceFactory extends Factory
     public function definition(): array
     {
         return [
-            //
+            'project_id' => Project::factory(),
+            'invoice_number' => fake()->randomNumber(),
+            'amount_gross' => fake()->randomFloat(2, 1, 50),
+            'platform_fee' => 2,
+            'amount_net' => fake()->randomFloat(2, 1, 40),
         ];
     }
 }

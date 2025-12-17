@@ -2,6 +2,7 @@
 
 namespace Database\Factories;
 
+use App\Models\Project;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
@@ -17,7 +18,12 @@ class CredentialFactory extends Factory
     public function definition(): array
     {
         return [
-            //
+            'project_id' => Project::factory(),
+            'type' => 'FTP',
+            'host' => fake()->url(),
+            'username' => fake()->userName(),
+            'encrypted_password' => fake()->sha256(),
+            'is_tested' => false
         ];
     }
 }
