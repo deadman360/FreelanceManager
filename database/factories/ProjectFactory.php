@@ -2,6 +2,7 @@
 
 namespace Database\Factories;
 
+use App\Models\Costumer;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
@@ -17,7 +18,12 @@ class ProjectFactory extends Factory
     public function definition(): array
     {
         return [
-            //
+            'costumer_id' => Costumer::factory(),
+            'name' => fake()->word(),
+            'status' => 'pending',
+            'deadline' => fake()->dateTime(),
+            'budget_amount' => fake()->randomFloat(2, 1, 50),
+            'repository_url' => fake()->url(),
         ];
     }
 }
