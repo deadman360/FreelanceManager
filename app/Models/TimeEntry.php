@@ -9,4 +9,5 @@ class TimeEntry extends Model
 {
     /** @use HasFactory<\Database\Factories\TimeEntryFactory> */
     use HasFactory;
+
 }
